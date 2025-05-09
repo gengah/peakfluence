@@ -493,7 +493,7 @@ const Page: FC = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             <a
-              href="mailto:peafluence@peakfluence.co.ke"
+              href="mailto:peakfluence@peakfluence.co.ke"
               className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition"
             >
               Contact Us
