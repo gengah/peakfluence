@@ -52,20 +52,24 @@ const Hero: FC = () => (
   >
     <div className="absolute inset-0 mix-blend-overlay bg-[url('/hero-bg.jpg')] bg-center bg-cover opacity-30" />
     {/* Navigation */}
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-white border-b border-gray-300 shadow-md">
-  <div className="container mx-auto flex items-center justify-between py-4 md:py-6 px-4 md:px-0">
-    <Image
-      src="/logo.jpeg"
-      alt="Logo"
-      width={128}
-      height={40}
-      className="h-10 md:h-12 w-32 md:w-40"
-    />
-    <ul className="hidden md:flex space-x-6">
-      {/* Navigation items */}
-    </ul>
-  </div>
-</nav>
+  <nav className="fixed top-0 left-0 right-0 z-10 bg-white border-b border-gray-300 shadow-md">
+      <div className="container mx-auto flex items-center justify-between py-6 px-4 md:px-0">
+        <Image
+          src="/logo.jpeg"
+          alt="PeakFluence Logo"
+          width={150}
+          height={50}
+          className="h-30 md:h-12 w-50"
+        />
+        <ul className="hidden md:flex space-x-6">
+          {navItems.map((item) => (
+            <li key={item.label}>
+              <NavLink href={item.href}>{item.label}</NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
 
     <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 md:px-0">
       <motion.h2
